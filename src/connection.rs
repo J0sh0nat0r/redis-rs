@@ -238,7 +238,7 @@ fn url_to_unix_connection_info(url: url::Url) -> RedisResult<ConnectionInfo> {
             None => 0,
         },
         passwd: url.password().and_then(|pw| Some(pw.to_string())),
-        tls,
+        tls: None,
     })
 }
 
